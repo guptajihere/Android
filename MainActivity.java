@@ -38,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
         newQuestion();
         playAgainButton.setVisibility(View.INVISIBLE);
         resultTextView.setText("");
+        button0.setClickable(true);
+        button1.setClickable(true);
+        button2.setClickable(true);
+        button3.setClickable(true);
 
         new CountDownTimer(30100,1000) {
 
@@ -48,8 +52,13 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                resultTextView.setText("Done!");
+                resultTextView.setText("Time up!");
+                timerTextView.setText("0s");
                 playAgainButton.setVisibility(View.VISIBLE);
+                button0.setClickable(false);
+                button1.setClickable(false);
+                button2.setClickable(false);
+                button3.setClickable(false);
             }
         }.start();
     }
@@ -75,8 +84,8 @@ public class MainActivity extends AppCompatActivity {
     public void newQuestion() {
         Random rand = new Random();
 
-        int a = rand.nextInt(21);
-        int b = rand.nextInt(21);
+        int a = rand.nextInt(41);
+        int b = rand.nextInt(41);
 
         sumTextView.setText(Integer.toString(a) + " + " + Integer.toString(b));
 
@@ -88,10 +97,10 @@ public class MainActivity extends AppCompatActivity {
             if (i == locationOfCorrectAnswer) {
                 answers.add(a+b);
             } else {
-                int wrongAnswer = rand.nextInt(41);
+                int wrongAnswer = rand.nextInt(81);
 
                 while (wrongAnswer == a+b) {
-                    wrongAnswer = rand.nextInt(41);
+                    wrongAnswer = rand.nextInt(81);
                 }
 
                 answers.add(wrongAnswer);
@@ -110,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        this.setTitle("Home screen");
         sumTextView = findViewById(R.id.sumTextView);
         button0 = findViewById(R.id.button0);
         button1 = findViewById(R.id.button1);
