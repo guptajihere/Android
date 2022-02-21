@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         int a = rand.nextInt(41);
         int b = rand.nextInt(41);
 
-        sumTextView.setText(Integer.toString(a) + " + " + Integer.toString(b));
+        sumTextView.setText(Integer.toString(a) + " + " + Integer.toString(b)+" = ");
 
         locationOfCorrectAnswer = rand.nextInt(4);
 

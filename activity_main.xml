@@ -27,16 +27,18 @@
     <android.support.constraint.ConstraintLayout
         android:id="@+id/gameLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-62dp"
+        tools:layout_editor_absoluteY="-79dp">
 
         <Button
             android:id="@+id/playAgainButton"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="11dp"
+            android:background="@drawable/rounded_corner"
             android:onClick="playAgain"
             android:text="Play Again"
-            android:background="@drawable/rounded_corner"
             android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -130,18 +132,18 @@
 
         <TextView
             android:id="@+id/sumTextView"
-            android:layout_width="130dp"
+            android:layout_width="155dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            
             android:padding="15dp"
-            android:text="31+ 7="
-
+            android:text="31 + 7 ="
             android:textAlignment="center"
 
-            android:textColor="#F44336"
+            android:textColor="#E91E63"
             android:textSize="30dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.419"
+            app:layout_constraintHorizontal_bias="0.435"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
