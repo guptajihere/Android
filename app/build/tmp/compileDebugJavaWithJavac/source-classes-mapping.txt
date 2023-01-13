@@ -1,0 +1,5 @@
+com/example/zappycode/braintrainer/BuildConfig.java
+ com.example.zappycode.braintrainer.BuildConfig
+com/example/zappycode/braintrainer/MainActivity.java
+ com.example.zappycode.braintrainer.MainActivity
+ com.example.zappycode.braintrainer.MainActivity$1
